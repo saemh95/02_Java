@@ -1,0 +1,20 @@
+package com.kh.variable.run;
+
+import java.util.Scanner;
+import com.kh.variable.practice2.*;
+public class PracticeRun {
+	public static void main (String[] args) {
+//		실행클래스
+		Scanner sc = new Scanner(System.in);
+		
+//		Practice1 ex1 = new Practice1();
+//		ex1.ex1();
+		
+		Practice2 pr1 = new Practice2();
+		pr1.input1();
+		String str1 = sc.next();
+		char ch = str1.charAt(0);
+		
+		System.out.printf("%d", ch);
+	}
+}
