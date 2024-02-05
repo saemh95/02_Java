@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.print.attribute.SetOfIntegerSyntax"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.awt.datatransfer.SystemFlavorMap"/>
+    <fullyQualifiedTypeName name="com.kh.variable.practice2.Practice1"/>
+    <fullyQualifiedTypeName name="com.kh.variable.run.PracticeRun"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.AbstractCollection"/>
+    <fullyQualifiedTypeName name="edu.kh.op.practice.OperatorPractice"/>
+    <fullyQualifiedTypeName name="edu.kh.op.practice.OperatorPractice2"/>
 </qualifiedTypeNameHistroy>
