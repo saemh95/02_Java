@@ -171,12 +171,94 @@ public class PracticeService {
 	public void practice7() {
 		
 //		주민등록번호 번호를 입력 받아 성별을 나타내는 숫자 이후부터 *로 가리고 출력하세요.
+//				[실행 화면]
+//				주민등록번호(-포함) : 123456-1234567
+//				123456-1******
 		
 		System.out.print("주민등록번호(-포함) : ");
 		String input = sc.nextLine();
 		
+		char arr[] = new char[input.length()];
+		char hide = '*';
+		
+		for(int i=0;i<arr.length;i++) {
+			arr[i] += input.charAt(i);
+		}
+		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<arr.length;i++) {
+			if (i > 7) {
+				arr[i] = hide;
+			}
+		}
+		System.out.println(arr);
+		
+		
 		
 	}
 	
+	public void practice8() {
+		
+//		3이상인 홀수를 입력 받아 배열의 중간까지는 1부터 1씩 증가하여 오름차순으로 값을 넣고,
+//		중간 이후부터 끝까지는 1씩 감소하여 내림차순으로 값을 넣어 출력하세요.
+//		단, 입력한 정수가 홀수가 아니거나 3 미만일 경우 “다시 입력하세요”를 출력하고
+//		다시 정수를 받도록 하세요.
+		
+//				[실행 화면]
+//				정수 : 4
+//				다시 입력하세요.
+//				정수 : -6
+//				다시 입력하세요.
+//				정수 : 5
+//				1, 2, 3, 2, 1
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		int arr[] = new int[input];
+		int minus = input/2;
+		int iNum1 = minus+1;
+		
+		for (int i=0;i<arr.length;i++) {
+			arr[i] += i+1;
+		}
+		System.out.println(Arrays.toString(arr));
+		
+		for (int i=0;i<arr.length;i++) {
+			
+			if(arr.length >= i/2) {
+//				i = minus;
+				arr[i] += minus;
+				System.out.println(Arrays.toString(arr));
+			} 
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+	
+//	public void practice8() {
+//	      Scanner sc = new Scanner(System.in);
+//	      System.out.println("3 이상인 홀수를 입력해주세요");
+//	      int inputNum = sc.nextInt();
+	
+	
+//	while(inputNum<3 ||inputNum%2==0) {
+//        System.out.println("3 이상 홀수 몰라요? 다시 입력해주세요");
+//        inputNum = sc.nextInt();         
+//  }
+//  
+//  
+//  //inputNum 에는 무조건 홀수가 온다는 거야. 
+//  
+//  int half = inputNum/2; //half 는 4
+//  int endNum = half +1; 
+//  
+//  
+//  for(int i=1; i<=endNum; i++) {
+//     System.out.print(i + " ");
+//  }
+//  for(int k=endNum; k>1; k--) {
+//     System.out.print(k-1 + " ");
+//  }
+//  
+//  //12345 4321
+//}	
 	
 }
