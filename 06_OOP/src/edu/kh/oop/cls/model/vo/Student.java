@@ -48,4 +48,31 @@ public class Student {
 		this.name = name;
 	}
 	
+	
+//	2. 생성자 ( constructor)
+	
+//	-new 연산자를 통해서 객체를 생성할때
+//	생성된 객체의 필드 값이 초기화 + 지정된 기능을 수행하는 역할
+	
+//	-생성자 작성 규칙
+//	1) 생성자의 이름은 반드시 class==constructor
+//	2) 반환형이 존재하지 않는다
+	
+//	-생성자 종류
+//	1) 기본 생성자
+//	2) 매개변수 생성자
+	
+	
+	public Student() {
+		System.out.println("HELLOOOOOOOO");
+	}
+	public Student(int num1, int num2) {
+		
+
+	}
+	
+	
+	
+	
+	
 }

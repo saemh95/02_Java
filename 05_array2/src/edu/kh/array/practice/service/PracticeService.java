@@ -210,7 +210,8 @@ public class PracticeService {
 //				다시 입력하세요.
 //				정수 : 5
 //				1, 2, 3, 2, 1
-		
+		Scanner sc = new Scanner(System.in);
+
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
 		
@@ -220,17 +221,18 @@ public class PracticeService {
 		}
 		
 		int arr[] = new int[input];
-		int half = input/2+1;
+//		int half = input/2+1;
 //		int iNum1 = half+1;
 		
 		for (int i=0;i<arr.length;i++) {
-			arr[i] += i+1;
-			if(arr[half]>=i) {
-				arr[half] -= half-1;
+//			arr[i] += i+1;
+			if(i<=input/2) {
+				arr[i] = i+1;
 //				arr[i] += minus;
-				System.out.println(Arrays.toString(arr));
-				System.out.println("--");
-				
+//				System.out.println(Arrays.toString(arr));
+//				System.out.println("--");		
+			} else {
+				arr[i] = arr[input -i -1];
 			}
 //				System.out.println(Arrays.toString(arr));
 		}
@@ -245,6 +247,28 @@ public class PracticeService {
 //			} 
 //		}
 //		System.out.println(Arrays.toString(arr));
+	}
+	
+	public void practice9() {
+		
+//		10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
+//		1~10 사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요.
+		
+//				[실행 화면]
+//				발생한 난수 : 9 7 6 2 5 10 7 2 9 6
+				
+		int arr[] = new int[10];
+		String input = "";
+		for (int i=0;i<arr.length;i++) {
+			
+			System.out.printf("%d 번째 정수 입력 : ", i);
+			arr[i] += sc.nextInt();			
+			if (arr[i]>10) {
+				System.out.print("1~10사이의 정수 입력\n");
+			} else {input += arr[i];}
+			
+		}
+		System.out.printf("발생한 정수 : %d", arr);
 	}
 		
 }
