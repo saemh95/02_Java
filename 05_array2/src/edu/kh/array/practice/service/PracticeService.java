@@ -213,52 +213,38 @@ public class PracticeService {
 		
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
+		
+		while(input<3 || input%2==0) {
+			System.out.println("다시 입력하세요");
+			input = sc.nextInt();
+		}
+		
 		int arr[] = new int[input];
-		int minus = input/2;
-		int iNum1 = minus+1;
+		int half = input/2+1;
+//		int iNum1 = half+1;
 		
 		for (int i=0;i<arr.length;i++) {
 			arr[i] += i+1;
+			if(arr[half]>=i) {
+				arr[half] -= half-1;
+//				arr[i] += minus;
+				System.out.println(Arrays.toString(arr));
+				System.out.println("--");
+				
+			}
+//				System.out.println(Arrays.toString(arr));
 		}
 		System.out.println(Arrays.toString(arr));
 		
-		for (int i=0;i<arr.length;i++) {
-			
-			if(arr.length >= i/2) {
-//				i = minus;
-				arr[i] += minus;
-				System.out.println(Arrays.toString(arr));
-			} 
-		}
-		System.out.println(Arrays.toString(arr));
+//		for (int i=0;i<arr.length;i++) {
+//			
+//			if(arr.length >= i/2) {
+////				i = minus;
+//				arr[i] += minus;
+//				System.out.println(Arrays.toString(arr));
+//			} 
+//		}
+//		System.out.println(Arrays.toString(arr));
 	}
-	
-//	public void practice8() {
-//	      Scanner sc = new Scanner(System.in);
-//	      System.out.println("3 이상인 홀수를 입력해주세요");
-//	      int inputNum = sc.nextInt();
-	
-	
-//	while(inputNum<3 ||inputNum%2==0) {
-//        System.out.println("3 이상 홀수 몰라요? 다시 입력해주세요");
-//        inputNum = sc.nextInt();         
-//  }
-//  
-//  
-//  //inputNum 에는 무조건 홀수가 온다는 거야. 
-//  
-//  int half = inputNum/2; //half 는 4
-//  int endNum = half +1; 
-//  
-//  
-//  for(int i=1; i<=endNum; i++) {
-//     System.out.print(i + " ");
-//  }
-//  for(int k=endNum; k>1; k--) {
-//     System.out.print(k-1 + " ");
-//  }
-//  
-//  //12345 4321
-//}	
-	
+		
 }
