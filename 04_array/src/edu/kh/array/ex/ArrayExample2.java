@@ -49,7 +49,8 @@ public class ArrayExample2 {
       //                  복사배열, 복사배열의 삽입 시작 인덱스, 복사길이);
       
       int[] copyArr2 = new int[arr.length]; //5칸짜리 배열 생성
-      System.arraycopy(arr, 0, copyArr2, 0, arr.length);
+      System.arraycopy(arr, 1, copyArr2, 1, 3);
+      System.out.println("copyArr2 : " + Arrays.toString(copyArr2));
       
       
       // 3. 복사를 당할 배열 참조변수 = Arrays.copyOf(원본배열, 복사할길이);

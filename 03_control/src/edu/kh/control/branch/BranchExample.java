@@ -83,7 +83,7 @@ public class BranchExample {
 //		매판마다 
 //		현재 기록 : 2승 1무 0패
 		
-		System.out.println("[가위 바위 보 게이~!!]");
+		System.out.println("[가위 바위 보 게임~!!]");
 		System.out.print("몊판? : ");
 		int count = sc.nextInt();
 		
@@ -98,9 +98,9 @@ public class BranchExample {
 			System.out.print("가위,바위,보 중 선택 : ");
 			String userInput = sc.next();
 			
-			int random = (int)Math.random()*3+1;
+			int random = (int)(Math.random()*3+1);
 			
-			String CPU = null;
+			String CPU = "";
 			switch (random) {
 				case 1 : CPU = "가위"; 
 				break;

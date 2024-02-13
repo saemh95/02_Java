@@ -1,7 +1,0 @@
-package com.kh.variable.run;
-
-public class PracticeRun {
-	public static void main (String[] args) {
-//		실행클래스
-	}
-}

@@ -258,17 +258,110 @@ public class PracticeService {
 //				발생한 난수 : 9 7 6 2 5 10 7 2 9 6
 				
 		int arr[] = new int[10];
-		String input = "";
-		for (int i=0;i<arr.length;i++) {
-			
-			System.out.printf("%d 번째 정수 입력 : ", i);
-			arr[i] += sc.nextInt();			
-			if (arr[i]>10) {
-				System.out.print("1~10사이의 정수 입력\n");
-			} else {input += arr[i];}
-			
+		for (int i=0;i<arr.length;i++) {		
+			int random = (int)(Math.random()*10+1);
+			arr[i] = random;
 		}
-		System.out.printf("발생한 정수 : %d", arr);
+		System.out.print(Arrays.toString(arr));
 	}
 		
+	public void practice10() {
+		
+//		10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
+//		1~10 사이의 난수를 발생시켜 배열에 초기화 후
+//		배열 전체 값과 그 값 중에서 최대값과 최소값을 출력하세요.
+//
+//		[실행 화면]
+//		발생한 난수 : 5 3 2 7 4 8 6 10 9 10
+//		최대값 : 10
+//		최소값 : 2
+		
+		int arr[] = new int[9];
+		arr[0] = (int)(Math.random()*10+1);
+		int large = arr[0];
+		int small = arr[0];
+		for (int i=0;i<arr.length;i++) {
+			int random = (int)(Math.random()*10+1);
+			arr[i] = random;
+//			System.out.println(Arrays.toString(arr));
+//			if(arr[i]>large) {
+//				arr[i] = large;
+//				System.out.println(large);
+//			}
+		}
+//		System.out.println("발생한 난수 : " + Arrays.toString(arr));
+		for (int i=0;i<arr.length;i++) {
+//			System.out.println("발생한 난수 : " + Arrays.toString(arr));
+			if (arr[i]>large) {
+				large = arr[i];
+			} else if(small>arr[i]) {
+				small = arr[i];
+			} 
+		}
+		System.out.println("발생한 난수 : " + Arrays.toString(arr));
+		System.out.println("최대값 : " + large);
+		System.out.println("최소값 : " + small);
+	}
+	
+	public void practice11() {
+		
+//		10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+//		1~10 사이의 난수를 발생시켜 중복된 값이 없게 배열에 초기화한 후 출력하세요.
+//
+//		[실행 화면]
+//		4 1 3 6 9 5 8 10 7 2
+		int arr[] = new int[10];
+		for (int i=0;i<arr.length;i++) {		
+			int random = (int)(Math.random()*10+1);
+			arr[i] = random;
+			for(int x=0; x<i; x++) {
+				if(random == arr[x]) {
+					i--;
+					break;
+				}
+			}
+		}
+		System.out.print(Arrays.toString(arr));
+		
+	}
+	
+	public void practice12() {
+		
+//		로또 번호 자동 생성기 프로그램을 만들기.
+//		(중복 값 없이 오름차순으로 정렬하여 출력하세요.)
+//
+//		[실행 화면]
+//		3 4 15 17 28 40
+		
+		int arr[] = new int[6];
+		for (int i=0;i<arr.length;i++) {
+			int random = (int)(Math.random()*45+1);
+			arr[i] = random;
+			for (int x=0;x<i;x++) {
+				if(random==arr[x]) {					
+					i--;
+					break;
+				}
+			}
+		}
+
+		Arrays.sort(arr);
+		
+//		System.out.println("로또 번호 : " + arr);
+		
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	public void practice13() {
+		
+//		문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
+//		문자의 개수와 함께 출력하세요.
+//
+//		[실행 화면]
+//		문자열 : application
+//		문자열에 있는 문자 : a, p, l, i, c, t, o, n
+//		문자 개수 : 8
+		
+	}
+	
 }
