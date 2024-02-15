@@ -1,5 +1,7 @@
 package com.hw4.model.vo;
 
+import com.hw4.controller.MemberController;
+
 public class Member {
 
 	private String userId;
@@ -10,7 +12,8 @@ public class Member {
 	private String email;
 	
 	public Member() {
-		
+		new MemberController().getMemberCount();
+		MemberController.SIZE = 10;
 	}
 	
 	public Member(String userId, String userPwd, String name, int age, char gender, String email) {
@@ -20,6 +23,10 @@ public class Member {
 		this.age = age;
 		this.gender = gender;
 		this.email = email;
+		
+		new MemberController().getMemberCount();
+		MemberController.SIZE = 10;
+		
 	}
 	
 	public String information() {
