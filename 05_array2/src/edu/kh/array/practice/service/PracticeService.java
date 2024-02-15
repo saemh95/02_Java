@@ -362,6 +362,9 @@ public class PracticeService {
 //		문자열에 있는 문자 : a, p, l, i, c, t, o, n
 //		문자 개수 : 8
 		
+		
+		
+		
 	}
 	
 }
