@@ -24,7 +24,9 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.hw3.controller.ProductController"/>
     <fullyQualifiedTypeName name="com.hw3.model.vo.Member"/>
-    <fullyQualifiedTypeName name="com.hw4.model.vo.Member"/>
-    <fullyQualifiedTypeName name="com.hw4.controller.MemberController"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.hw4.controller.MemberController"/>
+    <fullyQualifiedTypeName name="com.hw4.view.MemberMenu"/>
+    <fullyQualifiedTypeName name="com.hw4.model.vo.Member"/>
+    <fullyQualifiedTypeName name="edu.kh.inheritance.model.dto.Student"/>
 </qualifiedTypeNameHistroy>
