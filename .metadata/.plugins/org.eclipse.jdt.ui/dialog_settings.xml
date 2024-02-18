@@ -5,6 +5,8 @@
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\workspace\02_Java"/>
+	<item key="delegateUpdating" value="true"/>
+	<item key="delegateDeprecation" value="true"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -99,6 +101,12 @@
 		<item key="InstanceOf" value="false"/>
 		<item key="Blocks" value="false"/>
 		<item key="Objects.equals &amp; Objects.hash" value="true"/>
+		<list key="ToStringTemplateNames">
+			<item value="&lt;Default template&gt;"/>
+		</list>
+		<list key="ToStringTemplates">
+			<item value="${object.className} [${member.name()}=${member.value}, ${otherMembers}]"/>
+		</list>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item key="SortOrdering" value="false"/>
@@ -150,5 +158,8 @@
 		<item key="DIALOG_WIDTH" value="516"/>
 		<item key="DIALOG_HEIGHT" value="594"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="RenameInformationPopup">
+		<item key="snap_position" value="2"/>
 	</section>
 </section>

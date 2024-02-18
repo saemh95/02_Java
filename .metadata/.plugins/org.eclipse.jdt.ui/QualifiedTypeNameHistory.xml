@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="edu.kh.oop.practice.model.vo.Book"/>
     <fullyQualifiedTypeName name="com.kh.practice.service.view.SnackMenu"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.hw3.controller.ProductController"/>
     <fullyQualifiedTypeName name="com.hw3.model.vo.Member"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -29,4 +28,17 @@
     <fullyQualifiedTypeName name="com.hw4.view.MemberMenu"/>
     <fullyQualifiedTypeName name="com.hw4.model.vo.Member"/>
     <fullyQualifiedTypeName name="edu.kh.inheritance.model.dto.Student"/>
+    <fullyQualifiedTypeName name="edu.kh.poly.ex2.model.service.AbstractService"/>
+    <fullyQualifiedTypeName name="edu.kh.poly.ex2.model.vo.Animal"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
+    <fullyQualifiedTypeName name="com.edu.produc.model.vo.Product"/>
+    <fullyQualifiedTypeName name="com.edu.produc.model.vo.ProductView"/>
+    <fullyQualifiedTypeName name="com.edu.product.model.vo.Product"/>
+    <fullyQualifiedTypeName name="com.edu.product.model.service.ProductController"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="edu.kh.poly.ex2.model.vo.Person"/>
+    <fullyQualifiedTypeName name="com.hw2.model.dto.Prisoner"/>
+    <fullyQualifiedTypeName name="com.hw2.model.service.ManagementSystem"/>
+    <fullyQualifiedTypeName name="com.hw2.model.service.Company"/>
+    <fullyQualifiedTypeName name="com.hw2.model.dto.Employee"/>
 </qualifiedTypeNameHistroy>
