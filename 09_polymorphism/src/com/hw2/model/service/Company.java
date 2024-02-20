@@ -83,9 +83,9 @@ public class Company implements ManagementSystem{
 		for (int i=0;i<employees.length;i++) {
 //			employees[i] = new Employee().getInfo();
 			
-			
-			System.out.println(employees[i].getInfo());
-			
+			if (employees[i] != null) {				
+				System.out.println(employees[i].getInfo());
+			}
 		}
 		
 	}
