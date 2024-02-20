@@ -2,7 +2,7 @@ package edu.kh.collection.pack1.model.service;
 
 import java.util.*;
 
-import edu.kh.collection.model.vo.Student;
+import edu.kh.collection.pack1.model.vo.Student;
 
 public class StudentService {
 

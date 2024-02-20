@@ -1,4 +1,4 @@
-package edu.kh.collection.model.vo;
+package edu.kh.collection.pack1.model.vo;
 
 public class Student implements Comparable<Student>{
 
