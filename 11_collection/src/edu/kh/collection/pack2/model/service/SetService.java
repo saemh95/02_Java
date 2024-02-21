@@ -210,33 +210,38 @@ public class SetService {
 	 */
 	public void lottoNumberGenerator() {
 		
-		System.out.println("-LOTTORY-");
-		System.out.print("[1,000 per 1] select amount : ");
 		
 		List<Set<Integer>> result = new ArrayList<Set<Integer>>();
 		Random random = new Random();
-		try {
-			int input = sc.nextInt();
-			if (input <1000) {
-				System.out.println("1,000원 단위로 입력");
-			} else if (input%1000!=0) {
-				System.out.println("1,000원 단위로 입력");
-			}
-			for(int i=0;i<input/1000;i++) {
-				Set<Integer> lotto = new TreeSet<Integer>();
-				while (lotto.size() < 6) {
-					lotto.add(random.nextInt(45)+1);
-				} result.add(lotto);
-				System.out.println(i+1 + "회 : " + lotto);
-			}
-			
-		} catch (InputMismatchException e) {
-			System.out.println("숫자만 입력하세요");
-			sc.nextLine();
+		
+		System.out.println("-LOTTORY-");
+		int input = 0;
+		while (true) {
+			System.out.print("[1,000 per 1] select amount : ");
+			try {
+				input = sc.nextInt();
+				if (input <1000) {
+					System.out.println("1,000원 단위로 입력");
+				} else if (input%1000!=0) {
+					System.out.println("1,000원 단위로 입력");
+				} else {
+					break;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("숫자만 입력하세요");
+				sc.nextLine();
+				}
+		}
+				
+		for(int i=0;i<input/1000;i++) {
+			Set<Integer> lotto = new TreeSet<Integer>();
+			while (lotto.size() < 6) {
+				lotto.add(random.nextInt(45)+1);
+			} 
+			result.add(lotto);
+			System.out.println(i+1 + "회 : " + lotto);
 		}
 		
-		
-		
-	}
+	} 
 	
 }
