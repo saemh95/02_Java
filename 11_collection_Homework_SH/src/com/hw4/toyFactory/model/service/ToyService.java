@@ -6,14 +6,18 @@ import com.hw4.toyFactory.*;
 import com.hw4.toyFactory.model.controller.ToyController;
 import com.hw4.toyFactory.model.dto.*;
 public class ToyService {
-	
+	private Map<Integer, String> materials = new HashMap<Integer, String>();
 	ToyController controller = new ToyController();
 	private Scanner sc = new Scanner(System.in);
 	public ToyService () {		
-		Toy toy = new ToyMaterial();
+		Toy toy = new Toy();
+		materials.put(1, "면목질");
+		materials.put(2, "플라스틱");
+		materials.put(3, "유리");
+		materials.put(4, "고무");
 
-		controller.addToy(new ToyMaterial("파피", 12 , 57000, "빨간색", 19931225, 1, "면직물"));
-		controller.addToy(new ToyMaterial("마미롱레그", 8, 36000, "분홍색", 19950805, 1, "면직물"));
+		controller.addToy(new Toy("파피", 12 , 57000, "빨간색", 19931225));
+		controller.addToy(new Toy("마미롱레그", 8, 36000, "분홍색", 19950805));
 		
 	}
 	public void displayMenu() {
@@ -110,8 +114,27 @@ public class ToyService {
 		System.out.print("사용재료 : ");
 		String materialName = sc.next();
 		
-		Toy toy = new ToyMaterial(name, age, price, color, manuDate, materialId, materialName);
+		Toy toy = new Toy(name, age, price, color, manuDate);
 		controller.addToy(toy);
+		
+		while (true) {
+			System.out.println("<재료 추가>");
+			System.out.println("(종료하려면 q 입력)");
+			for (int i=0;i<materials.size();i++) {
+				System.out.println(i+" 번 : " + materials.get(i+1));
+			}
+			System.out.print("변호 입력 : ");
+			String input = sc.next();
+			if(input.toUpperCase().charAt(0)=='Q') {
+				System.out.println("종료합니다");
+				break;
+			} else {
+				int inputNum = Integer.parseInt(input);
+//				if (toy.getMaterials(materials.containsKey(inputNum))) {
+//					System.out.println("이미 포함 되어있는 재료입니다");
+//				}
+			}
+		}
 		System.out.println("저장 완료");
 		
 	}
@@ -119,10 +142,6 @@ public class ToyService {
 	private void showToy() throws InputMismatchException{
 		System.out.println("<전체 장난감 조회>");
 		
-		Collections.sort(controller.getToys());
-		for (Toy toy1 : controller.getToys()) {
-			System.out.println(toy1);
-		}
 		controller.showToy();
 		
 	}

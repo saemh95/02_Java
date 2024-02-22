@@ -7,11 +7,25 @@ import com.hw4.toyFactory.service.ToyManagement;
 public class ToyController implements ToyManagement {
 	
 	Toy toy = new Toy();
-	private List<Toy> toys = new ArrayList<>();
+	private Set<Toy> toys = new HashSet<Toy>();
+	
+//	private List<Toy> toys = new ArrayList<>();
 //	Toy toy = new Toy();
 	@Override
 	public void showToy() {
-		
+		for(Toy toy : toys) {
+	         System.out.println(toy);
+	      }
+
+	}
+
+	public Set<Toy> getToys() {
+		return toys;
+	}
+
+
+	public void setToys(Set<Toy> toys) {
+		this.toys = toys;
 	}
 
 	@Override
@@ -41,6 +55,12 @@ public class ToyController implements ToyManagement {
 	public void sortToyByDate() {
 		Comparator<Toy> ss = Comparator.comparing(Toy::getManuDate);
 		
+		List<Toy>toys=new ArrayList<>();
+		
+		for(Toy toy : toys) {
+			toys.add(toy);
+		}
+		
 		Collections.sort(toys, ss);
 		 for(Toy toy : toys) {
 	         System.out.println(toy);
@@ -51,10 +71,10 @@ public class ToyController implements ToyManagement {
 	public void sortToyByAge() {
 		Comparator<Toy> ss = Comparator.comparing(Toy::getAge);
 		
-		Collections.sort(toys, ss);
-		for(Toy toy : toys) {
-			System.out.println(toy);
-		}
+//		Collections.sort(toys, ss);
+//		for(Toy toy : toys) {
+//			System.out.println(toy);
+//		}
 		
 	}
 
@@ -66,18 +86,11 @@ public class ToyController implements ToyManagement {
 	}
 
 	@Override
-	public void addRecipe(int toyId, Map<Integer, String> material) {
-		// TODO Auto-generated method stub
+	public void addRecipe(String name) {
 		
 	}
 
-	public List<Toy> getToys() {
-		return toys;
-	}
-
-	public void setToys(List<Toy> toys) {
-		this.toys = toys;
-	}
+	
 
 	@Override
 	public int hashCode() {

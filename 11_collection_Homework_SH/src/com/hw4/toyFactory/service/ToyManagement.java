@@ -11,6 +11,6 @@ public interface ToyManagement {
 	void removeToy (String name);
 	void sortToyByDate ();
 	void sortToyByAge ();
-	void addRecipe (int toyId, Map<Integer, String> material);
+	void addRecipe (String name);
 	void removeRecipe (Toy toy, Integer materialName);
 }
