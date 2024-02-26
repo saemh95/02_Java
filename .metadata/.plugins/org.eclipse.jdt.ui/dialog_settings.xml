@@ -62,8 +62,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item key="width" value="590"/>
-		<item key="height" value="390"/>
+		<item key="width" value="580"/>
+		<item key="height" value="380"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item key="renameSubpackages" value="false"/>

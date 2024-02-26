@@ -171,7 +171,8 @@ public class ToyFactory {
 		System.out.println("<연령별 사용 가능한 장난감 리스트 조회>");
 
 		Map<Integer, List<Toy>> ageSort = new HashMap<Integer, List<Toy>>(); 
-		
+//		private Set<Toy> toySet = new HashSet<Toy>();
+
 		for(Toy toy : toySet) {
 			int age = toy.getAge();
 			
