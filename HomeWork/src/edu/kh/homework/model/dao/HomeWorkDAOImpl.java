@@ -64,5 +64,11 @@ public class HomeWorkDAOImpl implements HomeWorkDAO{
 		
 	}
 
+	@Override
+	public List<HomeWork> viewHw() {
+
+		return hw;
+	}
+
 	
 }
