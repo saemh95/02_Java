@@ -48,5 +48,70 @@ public class HomeWorkServiceImpl implements HomeWorkService{
 		return formattedDateTime;
 	}
 
+	@Override
+	public int createHw(String title, String detail, int input) throws Exception{
+		
+		HomeWork hw = new HomeWork(title, false, LocalDateTime.now(), detail, input);
+		int index = dao.createHw(hw);
+		return index;
+		
+	}
+	@Override
+	public boolean updateHw(int index, String title, String detail, int important) throws Exception{
+		return dao.updateHw(index, title, detail, important);
+	}
+	@Override
+	public String deleteHw(int index) throws Exception{
+		
+		HomeWork delete = dao.deleteHw(index);
+		if (delete == null) return null;
+		
+		
+		
+		return delete.getTitle();
+	}
+	@Override
+	public String deleteHw() throws Exception{
+		List <HomeWork> hw = dao.viewHw();
+		StringBuilder sb = new StringBuilder();
+		int count = -1;
+		for (HomeWork homework : hw) {
+			count ++;
+			String title = homework.getTitle();
+			String completed = homework.isDone() ? "Y" : "N";
+			String detail = homework.getDetail();
+			int imp = homework.getImportant();
+			String date = dateFormat(homework.getRegDate());
+			
+			String result = "[ " + count + " No ]" + "Title : " + title + " / Done : " + completed + " / Detail : " + detail + " / Important : " + imp + " / Created Date : " + date;
+			sb.append(result + "\n");
+		}
+		return sb.toString();
+	}
+
+	@Override
+	public String sortByImportance() {
+		List<HomeWork> hw = dao.viewHw();
+//		Map<String, Object> hwMap = new HashMap<String, Object>();
+		
+		Comparator<HomeWork> importance = Comparator.comparing(HomeWork::getImportant);
+		String sortByImp = "";
+		int count = 0;
+		Collections.sort(hw, importance);
+		for (HomeWork homework : hw) {
+			count++;
+			sortByImp += "[" + count + "] Title : " + homework.getTitle() + " / Importance : " + homework.getImportant() + " / Status : " + homework.isDone() + " / Detail : " + homework.getDetail() + " / Registered Date : " + homework.getRegDate() + "\n";
+		}
+//		hwMap.put("importance", hwMap);
+//		hwMap.put(null, hwMap);
+		return sortByImp;
+	}
+
+	@Override
+	public boolean completeHw(int index) throws Exception{
+
+		return dao.completeHw(index);
+	}
+	
 	
 }

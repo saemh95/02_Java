@@ -67,7 +67,7 @@ public class HomeWork implements Serializable{
 
 	@Override
 	public String toString() {
-		return "[HomeWork] Title : " + title + ", Status : " + done + ", Registerd Date : " + regDate + ", Detail : " + detail
+		return "Title : " + title + ", Status : " + done + ", Registerd Date : " + regDate + ", Detail : " + detail
 				+ ", Importance : " + important;
 	}
 

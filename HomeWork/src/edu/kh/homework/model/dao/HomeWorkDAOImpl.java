@@ -70,5 +70,59 @@ public class HomeWorkDAOImpl implements HomeWorkDAO{
 		return hw;
 	}
 
+	@Override
+	public int createHw(HomeWork homework) throws Exception {
+		
+		if (hw.add(homework)) {
+			saveFile();
+			return hw.size()-1;
+		}
+		return -1;
+	}
+
+	private void saveFile() throws Exception{
+
+		try {
+			oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
+			oos.writeObject(hw);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public boolean updateHw(int index, String title, String detail, int important) throws Exception{
+		
+		HomeWork homework = new HomeWork(title, hw.get(index).isDone(), hw.get(index).getRegDate(), detail, important);
+		
+		if (hw.set(index, homework) != null) {
+			
+			saveFile();
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public HomeWork deleteHw(int index) {
+		if (index < 0 || index >= hw.size()) return null;
+		
+		HomeWork delete = hw.remove(index);
+		return delete;
+	}
+
+	@Override
+	public boolean completeHw(int index) throws Exception{
+		
+		if (index < 0 || index > hw.size()) return false;
+		
+		boolean completed = hw.get(index).isDone();
+		
+		hw.get(index).setDone(!completed);
+		saveFile();
+		return true;
+	}
+
 	
 }
